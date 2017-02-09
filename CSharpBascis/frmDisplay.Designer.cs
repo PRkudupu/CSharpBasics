@@ -1,6 +1,6 @@
 ﻿namespace CSharpBascis
 {
-    partial class Form1
+    partial class frmDisplay
     {
         /// <summary>
         /// Required designer variable.

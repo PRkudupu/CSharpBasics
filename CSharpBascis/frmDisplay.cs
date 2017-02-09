@@ -11,9 +11,9 @@ using System.Collections;
 
 namespace CSharpBascis
 {
-    public partial class Form1 : Form
+    public partial class frmDisplay : Form
     {
-        public Form1()
+        public frmDisplay()
         {
             InitializeComponent();
         }
