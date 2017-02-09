@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections;
+using System.Runtime.Remoting.Messaging;
+using System.Security.Cryptography.X509Certificates;
 
 namespace CSharpBascis
 {
@@ -23,8 +25,9 @@ namespace CSharpBascis
 
         }
 
-        
+        #region Array ArrayList
         /// <summary>
+        /// ARRAY ARRAY LIST AND OBJECTS
         /// Can you store different types in an array ?
         /// Yes . If you create object array.Since all types inherit from object.array.Since all types inherit directly or indirectly from object type.
         /// We can add any types to an array including complex types
@@ -72,8 +75,6 @@ namespace CSharpBascis
                 MessageBox.Show(@"Array List :"+obj);
             }
         }
-
-
         public class Customer
         {
             public int ID { get; set; }
@@ -85,6 +86,9 @@ namespace CSharpBascis
                 return this.Name;
             }
         }
+        #endregion
+
+        #region JaggedArray
         /// <summary>
         /// Jagged array is an array or arrays
         /// </summary>
@@ -125,9 +129,73 @@ namespace CSharpBascis
                 //loop through the inner array
                 for (int j = 0; j < innerArray.Length; j++)
                 {
-                    MessageBox.Show(@"Employee Name :" + employeeNames[i] + @" "+ innerArray[j]);
+                    MessageBox.Show(@"Employee Name :" + employeeNames[i] + @"--> "+ innerArray[j]);
                 }
             }
         }
+
+        #endregion
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //GetFullTimeEmployee
+            FulltimeEmployee fulltimeEmployee = new FulltimeEmployee();
+            fulltimeEmployee.Id = 1;
+            fulltimeEmployee.FirstName = "Prathap ";
+            fulltimeEmployee.LastName = "Kudupu";
+            fulltimeEmployee.AnnualSalary = 30000;
+            MessageBox.Show(@"FullName :" + fulltimeEmployee.GetFullName() + @"Salary :" + fulltimeEmployee.GetMontlySalary());
+
+            //Contract employee
+            ContractEmployee contractEmployee = new ContractEmployee();
+            contractEmployee.Id = 1;
+            contractEmployee.FirstName = "Prathap ";
+            contractEmployee.LastName = "Kudupu";
+            contractEmployee.Pay = 95;
+            contractEmployee.Hours = 160;
+            MessageBox.Show(@"Contract :" + contractEmployee.GetFullName() + @"Salary :" + contractEmployee.GetMontlySalary());
+
+        }
+        /// <summary>
+        /// Abstract class can only be implemented cannot be instantiated
+        /// Would prevent accidentel use of the base class
+        /// Abstract method : If we make the method abstract we do not have to provide the implementation
+        /// </summary>
+        public abstract class BaseEmployee
+        {
+            public int Id { get; set; }
+            public string FirstName { get; set; }
+            public string LastName { get; set; }
+
+            public string GetFullName()
+            {
+                return this.FirstName + this.LastName;
+            }
+            //abstract method
+            public abstract int GetMontlySalary();
+        }
+
+        public class FulltimeEmployee: BaseEmployee
+        {
+            public int  AnnualSalary { get; set; }
+            //abstract method
+            public override int GetMontlySalary()
+
+            {
+                return this.AnnualSalary/12;
+            }
+        }
+        public class ContractEmployee : BaseEmployee
+        {
+            public int Hours { get; set; }
+            public int Pay { get; set; }
+            //abstract method
+            public override int GetMontlySalary()
+
+            {
+                return this.Hours * Pay;
+            }
+        }
+
     }
 }
