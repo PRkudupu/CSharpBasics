@@ -23,10 +23,7 @@ namespace CSharpBascis
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
         /// <summary>
         /// Can you store different types in an array ?
         /// Yes . If you create object array.Since all types inherit from object.array.Since all types inherit directly or indirectly from object type.
@@ -35,7 +32,7 @@ namespace CSharpBascis
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void button1_Click(object sender, EventArgs e)
+        private void ArrayList_Click(object sender, EventArgs e)
         {
             //Strongly types arrray
             int [] array= new int[2];
@@ -76,6 +73,7 @@ namespace CSharpBascis
             }
         }
 
+
         public class Customer
         {
             public int ID { get; set; }
@@ -85,6 +83,50 @@ namespace CSharpBascis
             public override string ToString()
             {
                 return this.Name;
+            }
+        }
+        /// <summary>
+        /// Jagged array is an array or arrays
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void JarredArray_Click(object sender, EventArgs e)
+        {
+            // string array to store employee names
+            string[] employeeNames = new string[3];
+            employeeNames[0] = "Mark";
+            employeeNames[1] = "Matt";
+            employeeNames[2] = "John";
+
+            // string array to store employee qulifications
+            string[] [] jaggedArray = new string[3] [];
+            //Specify the size of the array
+            jaggedArray[0] = new string[3];
+            jaggedArray[1] = new string[1];
+            jaggedArray[2] = new string[2];
+
+            //initilize first string array
+            jaggedArray[0] [0]=  "Bachelors";
+            jaggedArray[0] [1] = "Masters";
+            jaggedArray[0] [2] = "Doctorate";
+
+            //initilize second string array
+            jaggedArray[1][0] = "Bachelors";
+            
+            //initilize third string array
+            jaggedArray[2][0] = "Bachelors";
+            jaggedArray[2][1] = "Masters";
+        
+            // Loop through the array. We need to get the length of the jagged array
+            for (int i = 0; i < jaggedArray.Length; i++)
+            {
+                
+                string[] innerArray = jaggedArray[i];
+                //loop through the inner array
+                for (int j = 0; j < innerArray.Length; j++)
+                {
+                    MessageBox.Show(@"Employee Name :" + employeeNames[i] + @" "+ innerArray[j]);
+                }
             }
         }
     }
