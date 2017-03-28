@@ -251,7 +251,11 @@ namespace CSharpBascis
             
         }
 
-        
+        /// <summary>
+        /// Example for factory pattern implementation
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void abstractFactory_Click(object sender, EventArgs e)
         {
            
@@ -267,5 +271,40 @@ namespace CSharpBascis
 
 
         }
+        /// <summary>
+        /// Api to show using List 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ListExample_Click(object sender, EventArgs e)
+        {
+            ListExample lst = new ListExample();
+            //Fetch the list of countries
+            var country = lst.GetCountries();
+            //Use for each for display
+            foreach (String ls in country)
+            {
+                MessageBox.Show(@"Countries :"+ls);
+            }
+            //Use for display
+            for(int i=0;i<= country.Count-1;i++)
+            {
+                MessageBox.Show(@"For loop Countries :" + country[i]);
+            }
+            //Fetch the list of countries
+            var zipCode = lst.GetZipCode();
+
+            //Use for display
+            foreach (int ls in zipCode)
+            {
+                MessageBox.Show(@"Zip Code :" + ls);
+            }
+            //Use for display
+            for (int i = 0; i <= zipCode.Count-1; i++)
+            {
+                MessageBox.Show(@"For loop zipCode :" + zipCode[i]);
+            }
+        }
     }
 }
+ 
