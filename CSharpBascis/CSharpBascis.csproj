@@ -52,6 +52,7 @@
     <Compile Include="frmDisplay.Designer.cs">
       <DependentUpon>frmDisplay.cs</DependentUpon>
     </Compile>
+    <Compile Include="GenericsExample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmDisplay.resx">

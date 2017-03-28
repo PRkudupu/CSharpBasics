@@ -136,6 +136,7 @@ namespace CSharpBascis
 
         #endregion
 
+        #region Abstract class implementation
         private void button3_Click(object sender, EventArgs e)
         {
             //GetFullTimeEmployee
@@ -197,5 +198,59 @@ namespace CSharpBascis
             }
         }
 
+        #endregion
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Reverse(txtStringToveReveresed.Text);
+
+            MessageBox.Show(@"Rev :" + Reverse(txtStringToveReveresed.Text) );
+            MessageBox.Show(@"Array Reverse :" + Reverse(txtStringToveReveresed.Text));
+
+        }
+
+        //function to reverse a string
+        public string Reverse(string text)
+        {
+
+            //Convert the 
+            char[] cArray = text.ToCharArray();
+
+            string reverse = string.Empty;
+            for (int i = cArray.Length - 1; i >= 0; i--)
+            {
+                reverse = reverse + cArray[i];
+
+            }
+            return reverse;
+        }
+
+        //function to reverse using array.reverse
+        public string ArrayReverse(string text)
+        {
+            //Convert the 
+            char[] cArray = text.ToCharArray();
+            Array.Reverse(cArray);
+              return new string( cArray);
+        }
+
+        private void Generics_Click(object sender, EventArgs e)
+        {
+            //Using strongly typed function
+            bool isEqual = GenericsExample.IsEqualStronglyType(10, 10);
+            MessageBox.Show(@"isEqual :" + isEqual);
+            //Using object typed function
+            bool isObjectEqual = GenericsExample.IsEqualObjectType(10, 10);
+            MessageBox.Show(@"isobjetEqual :" + isObjectEqual);
+            //check for generic method
+            bool isGenericEqual = GenericsExample.IsGenericEqual<int>(10, 10);
+            MessageBox.Show(@"isGenericEqual :" + isGenericEqual);
+            //check for generic class
+            bool isGenericClassEqual = GenericClassExample<int>.IsGenericEqual(10, 10);
+            MessageBox.Show(@"is Generic Class Equal :" + isGenericClassEqual);
+
+
+            
+        }
     }
 }
