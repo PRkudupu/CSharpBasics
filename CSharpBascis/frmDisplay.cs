@@ -254,17 +254,15 @@ namespace CSharpBascis
         
         private void abstractFactory_Click(object sender, EventArgs e)
         {
-            FactoryPattern.ICustomer  i= null;
-
+           
             //Call Simple customer factory
             FactoryPattern.CustomerFactory obj= new FactoryPattern.CustomerFactory();
             //Simple Customer
-            var simpleObj=obj.create(1);
+            var simpleObj=obj.create(0);
             //Discounted Customer
-            var discountedObj=obj.create(2);
+            var discountedObj=obj.create(1);
 
             MessageBox.Show(@"Simple Customer :" + simpleObj.Calculate());
-
             MessageBox.Show(@"Discounted Customer :" + discountedObj.Calculate());
 
 
