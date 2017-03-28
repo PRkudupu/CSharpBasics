@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FactoryPattern\CustomerFactory.cs" />
     <Compile Include="frmDisplay.cs">
       <SubType>Form</SubType>
     </Compile>

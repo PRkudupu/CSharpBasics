@@ -248,9 +248,26 @@ namespace CSharpBascis
             //check for generic class
             bool isGenericClassEqual = GenericClassExample<int>.IsGenericEqual(10, 10);
             MessageBox.Show(@"is Generic Class Equal :" + isGenericClassEqual);
-
-
             
+        }
+
+        
+        private void abstractFactory_Click(object sender, EventArgs e)
+        {
+            FactoryPattern.ICustomer  i= null;
+
+            //Call Simple customer factory
+            FactoryPattern.CustomerFactory obj= new FactoryPattern.CustomerFactory();
+            //Simple Customer
+            var simpleObj=obj.create(1);
+            //Discounted Customer
+            var discountedObj=obj.create(2);
+
+            MessageBox.Show(@"Simple Customer :" + simpleObj.Calculate());
+
+            MessageBox.Show(@"Discounted Customer :" + discountedObj.Calculate());
+
+
         }
     }
 }

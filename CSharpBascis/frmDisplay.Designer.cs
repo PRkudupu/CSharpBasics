@@ -39,12 +39,14 @@
             this.txtStringToveReveresed = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.abstractFactory = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(244, 32);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 0;
@@ -75,7 +77,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(244, 78);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 28);
             this.button2.TabIndex = 3;
@@ -96,7 +98,7 @@
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(244, 132);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(100, 28);
             this.button3.TabIndex = 5;
@@ -117,7 +119,7 @@
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(244, 180);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(100, 28);
             this.button4.TabIndex = 7;
@@ -128,7 +130,7 @@
             // txtStringToveReveresed
             // 
             this.txtStringToveReveresed.Location = new System.Drawing.Point(395, 180);
-            this.txtStringToveReveresed.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtStringToveReveresed.Margin = new System.Windows.Forms.Padding(4);
             this.txtStringToveReveresed.Name = "txtStringToveReveresed";
             this.txtStringToveReveresed.Size = new System.Drawing.Size(132, 22);
             this.txtStringToveReveresed.TabIndex = 8;
@@ -154,11 +156,34 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.Generics_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(47, 284);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(111, 17);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Abstract Factory";
+            // 
+            // abstractFactory
+            // 
+            this.abstractFactory.Location = new System.Drawing.Point(244, 284);
+            this.abstractFactory.Margin = new System.Windows.Forms.Padding(4);
+            this.abstractFactory.Name = "abstractFactory";
+            this.abstractFactory.Size = new System.Drawing.Size(100, 28);
+            this.abstractFactory.TabIndex = 12;
+            this.abstractFactory.Text = "Validate";
+            this.abstractFactory.UseVisualStyleBackColor = true;
+            this.abstractFactory.Click += new System.EventHandler(this.abstractFactory_Click);
+            // 
             // frmDisplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1914, 767);
+            this.Controls.Add(this.abstractFactory);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtStringToveReveresed);
@@ -170,7 +195,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmDisplay";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -192,6 +217,8 @@
         private System.Windows.Forms.TextBox txtStringToveReveresed;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button abstractFactory;
     }
 }
 
