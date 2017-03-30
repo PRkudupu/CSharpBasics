@@ -9,15 +9,23 @@ namespace CSharpBascis
 {
     class asyncAwait
     {
-        public static string ReadFromFile()
+        public async static void ReadFromFile()
         {
-                 return GetCount();
+            //Create a new task
+            Task<string> task = new Task<string>(GetCount);
+            //start the task
+            task.Start();
+
+            //ask the task to await
+            var message = await task;
+                            
         }
 
         private static string GetCount()
         {
+
             Thread.Sleep(5000);
-            return ("Thread Sleep");
+            return "asyn call";
 
         }
     }

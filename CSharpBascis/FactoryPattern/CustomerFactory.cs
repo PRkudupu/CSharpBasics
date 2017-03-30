@@ -22,8 +22,7 @@ namespace CSharpBascis.FactoryPattern
             customerList.Add(new DiscountedCustomer());
 
         }
-
-
+        
         //Note return type is an interface.Reason is that of polymorphism
         //At run time an object of one type can point to object of another type is known as polymorphism.
         public ICustomer create(int i)

@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 using System.Collections;
 using System.Runtime.Remoting.Messaging;
@@ -157,10 +158,11 @@ namespace CSharpBascis
             MessageBox.Show(@"Contract :" + contractEmployee.GetFullName() + @"Salary :" + contractEmployee.GetMontlySalary());
 
         }
-        
+
 
         #endregion
 
+        #region reverse Array string
         private void button4_Click(object sender, EventArgs e)
         {
             Reverse(txtStringToveReveresed.Text);
@@ -185,7 +187,7 @@ namespace CSharpBascis
             }
             return reverse;
         }
-
+       
         //function to reverse using array.reverse
         public string ArrayReverse(string text)
         {
@@ -194,7 +196,9 @@ namespace CSharpBascis
             Array.Reverse(cArray);
               return new string( cArray);
         }
+        #endregion
 
+        #region Generics
         private void Generics_Click(object sender, EventArgs e)
         {
             //Using strongly typed function
@@ -211,7 +215,9 @@ namespace CSharpBascis
             MessageBox.Show(@"is Generic Class Equal :" + isGenericClassEqual);
             
         }
+        #endregion
 
+        #region Factory pattern implementation
         /// <summary>
         /// Example for factory pattern implementation
         /// </summary>
@@ -232,6 +238,9 @@ namespace CSharpBascis
 
 
         }
+        #endregion
+
+        #region List
         /// <summary>
         /// Api to show using List 
         /// </summary>
@@ -266,6 +275,10 @@ namespace CSharpBascis
                 MessageBox.Show(@"For loop zipCode :" + zipCode[i]);
             }
         }
+        #endregion
+
+        #region Async and Await
+
         /// <summary>
         /// Example for async and await
         /// </summary>
@@ -273,10 +286,89 @@ namespace CSharpBascis
         /// <param name="e"></param>
         private void asyncAwait_Click(object sender, EventArgs e)
         {
+            //asyncAwait.ReadFromFile();
+            MessageBox.Show("Start :");
+            //async method call
+            example();
+            MessageBox.Show("running asnc :");
 
-            MessageBox.Show(@"Output :" + asyncAwait.ReadFromFile());
-            
+
         }
+
+        public async void example()
+        {
+            //Create a task
+            Task<string> task = new Task<string>(GetCount);
+            task.Start();
+            //wait for task to be completed
+            var str = await task;
+            MessageBox.Show("Completed");
+
+        }
+
+        public string GetCount()
+        {
+            Thread.Sleep(5000);
+            return "Blocking call";
+        }
+
+
+        #endregion
+
+        #region Factorial
+        private void factorial_Click(object sender, EventArgs e)
+        {
+
+            MessageBox.Show("Factorial using non recursive method :" + Factorial.GetFactorial(4));
+           // MessageBox.Show("Factorial using recursive method :" + Factorial.GetFactorialRecursive(4));
+
+
+        }
+        #endregion
+
+        #region FindMaxIntegerArray
+        private void findMaxIntArray_Click(object sender, EventArgs e)
+        {
+            var max = FindMaxIntInArray.FindMax();
+            MessageBox.Show("max"+ max);
+        }
+        #endregion
+
+        #region ReverseIntegerContent
+        private void ReverseIntArray_Click(object sender, EventArgs e)
+        {
+           int  [] arr = ReverseIntegerArray.Reverse();
+            for(int i=0;i<= arr.Length-1;i++)
+            {
+                MessageBox.Show("Integer Array" + arr[i]);
+            }
+
+        }
+        #endregion
+
+
+        #region Func
+        private void Func_Click(object sender, EventArgs e)
+        {
+            //Function with one input parameter and one return value
+            Func<int, string> func = (x) => string.Format("string= {0}", x);
+
+            //Function with two input parameter and one return value
+            Func<int,int, string> func1 = (x,y) => string.Format("string= {0} and {1}" , x,y);
+            
+            //Function that has no parameters
+            Func<string> func2 = () => string.Format("Return string ");
+
+            //Call Func
+            
+            MessageBox.Show("Func with one parameter" + func(1));
+
+           
+            MessageBox.Show("Func with two parameter" + func1(1,4));
+            
+            MessageBox.Show("Func with no parameter" + func2());
+        }
+        #endregion
     }
 }
  
