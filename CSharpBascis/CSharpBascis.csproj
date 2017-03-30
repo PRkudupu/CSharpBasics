@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractClass\AbstractExample.cs" />
+    <Compile Include="asyncAwait.cs" />
     <Compile Include="FactoryPattern\CustomerFactory.cs" />
     <Compile Include="frmDisplay.cs">
       <SubType>Form</SubType>

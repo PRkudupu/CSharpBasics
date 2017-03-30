@@ -140,7 +140,7 @@ namespace CSharpBascis
         private void button3_Click(object sender, EventArgs e)
         {
             //GetFullTimeEmployee
-            FulltimeEmployee fulltimeEmployee = new FulltimeEmployee();
+            AbstractClass.FulltimeEmployee fulltimeEmployee = new CSharpBascis.AbstractClass.FulltimeEmployee();
             fulltimeEmployee.Id = 1;
             fulltimeEmployee.FirstName = "Prathap ";
             fulltimeEmployee.LastName = "Kudupu";
@@ -148,7 +148,7 @@ namespace CSharpBascis
             MessageBox.Show(@"FullName :" + fulltimeEmployee.GetFullName() + @"Salary :" + fulltimeEmployee.GetMontlySalary());
 
             //Contract employee
-            ContractEmployee contractEmployee = new ContractEmployee();
+            AbstractClass.ContractEmployee contractEmployee = new CSharpBascis.AbstractClass.ContractEmployee();
             contractEmployee.Id = 1;
             contractEmployee.FirstName = "Prathap ";
             contractEmployee.LastName = "Kudupu";
@@ -157,46 +157,7 @@ namespace CSharpBascis
             MessageBox.Show(@"Contract :" + contractEmployee.GetFullName() + @"Salary :" + contractEmployee.GetMontlySalary());
 
         }
-        /// <summary>
-        /// Abstract class can only be implemented cannot be instantiated
-        /// Would prevent accidentel use of the base class
-        /// Abstract method : If we make the method abstract we do not have to provide the implementation
-        /// </summary>
-        public abstract class BaseEmployee
-        {
-            public int Id { get; set; }
-            public string FirstName { get; set; }
-            public string LastName { get; set; }
-
-            public string GetFullName()
-            {
-                return this.FirstName + this.LastName;
-            }
-            //abstract method
-            public abstract int GetMontlySalary();
-        }
-
-        public class FulltimeEmployee: BaseEmployee
-        {
-            public int  AnnualSalary { get; set; }
-            //abstract method
-            public override int GetMontlySalary()
-
-            {
-                return this.AnnualSalary/12;
-            }
-        }
-        public class ContractEmployee : BaseEmployee
-        {
-            public int Hours { get; set; }
-            public int Pay { get; set; }
-            //abstract method
-            public override int GetMontlySalary()
-
-            {
-                return this.Hours * Pay;
-            }
-        }
+        
 
         #endregion
 
@@ -304,6 +265,17 @@ namespace CSharpBascis
             {
                 MessageBox.Show(@"For loop zipCode :" + zipCode[i]);
             }
+        }
+        /// <summary>
+        /// Example for async and await
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void asyncAwait_Click(object sender, EventArgs e)
+        {
+
+            MessageBox.Show(@"Output :" + asyncAwait.ReadFromFile());
+            
         }
     }
 }

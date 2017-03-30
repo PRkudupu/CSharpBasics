@@ -43,14 +43,15 @@
             this.abstractFactory = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.ListExample = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(244, 32);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(183, 26);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 28);
+            this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
             this.button1.Text = "Validate";
             this.button1.UseVisualStyleBackColor = true;
@@ -59,29 +60,26 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(47, 32);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(35, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(175, 17);
+            this.label1.Size = new System.Drawing.Size(131, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Array , Object , Collections";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(47, 84);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(35, 68);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 17);
+            this.label2.Size = new System.Drawing.Size(63, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Jarred Array";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(244, 78);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Location = new System.Drawing.Point(183, 63);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 28);
+            this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 3;
             this.button2.Text = "Validate";
             this.button2.UseVisualStyleBackColor = true;
@@ -90,19 +88,17 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(47, 132);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(35, 107);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 17);
+            this.label3.Size = new System.Drawing.Size(73, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "Abstarct class";
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(244, 132);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Location = new System.Drawing.Point(183, 107);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 28);
+            this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 5;
             this.button3.Text = "Validate";
             this.button3.UseVisualStyleBackColor = true;
@@ -111,19 +107,17 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(47, 180);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(35, 146);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 17);
+            this.label4.Size = new System.Drawing.Size(75, 13);
             this.label4.TabIndex = 6;
             this.label4.Text = "Reverse string";
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(244, 180);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.Location = new System.Drawing.Point(183, 146);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(100, 28);
+            this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 7;
             this.button4.Text = "Validate";
             this.button4.UseVisualStyleBackColor = true;
@@ -131,28 +125,25 @@
             // 
             // txtStringToveReveresed
             // 
-            this.txtStringToveReveresed.Location = new System.Drawing.Point(395, 180);
-            this.txtStringToveReveresed.Margin = new System.Windows.Forms.Padding(4);
+            this.txtStringToveReveresed.Location = new System.Drawing.Point(296, 146);
             this.txtStringToveReveresed.Name = "txtStringToveReveresed";
-            this.txtStringToveReveresed.Size = new System.Drawing.Size(132, 22);
+            this.txtStringToveReveresed.Size = new System.Drawing.Size(100, 20);
             this.txtStringToveReveresed.TabIndex = 8;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(47, 236);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(35, 192);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 17);
+            this.label5.Size = new System.Drawing.Size(49, 13);
             this.label5.TabIndex = 9;
             this.label5.Text = "Generics";
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(244, 230);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
+            this.button5.Location = new System.Drawing.Point(183, 187);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(100, 28);
+            this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 10;
             this.button5.Text = "Validate";
             this.button5.UseVisualStyleBackColor = true;
@@ -161,19 +152,17 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(47, 284);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(35, 231);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(111, 17);
+            this.label6.Size = new System.Drawing.Size(84, 13);
             this.label6.TabIndex = 11;
             this.label6.Text = "Abstract Factory";
             // 
             // abstractFactory
             // 
-            this.abstractFactory.Location = new System.Drawing.Point(244, 284);
-            this.abstractFactory.Margin = new System.Windows.Forms.Padding(4);
+            this.abstractFactory.Location = new System.Drawing.Point(183, 231);
             this.abstractFactory.Name = "abstractFactory";
-            this.abstractFactory.Size = new System.Drawing.Size(100, 28);
+            this.abstractFactory.Size = new System.Drawing.Size(75, 23);
             this.abstractFactory.TabIndex = 12;
             this.abstractFactory.Text = "Validate";
             this.abstractFactory.UseVisualStyleBackColor = true;
@@ -182,29 +171,48 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(47, 336);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(35, 273);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(87, 17);
+            this.label7.Size = new System.Drawing.Size(66, 13);
             this.label7.TabIndex = 13;
             this.label7.Text = "List Example";
             // 
             // ListExample
             // 
-            this.ListExample.Location = new System.Drawing.Point(244, 336);
-            this.ListExample.Margin = new System.Windows.Forms.Padding(4);
+            this.ListExample.Location = new System.Drawing.Point(183, 273);
             this.ListExample.Name = "ListExample";
-            this.ListExample.Size = new System.Drawing.Size(100, 28);
+            this.ListExample.Size = new System.Drawing.Size(75, 23);
             this.ListExample.TabIndex = 14;
             this.ListExample.Text = "Validate";
             this.ListExample.UseVisualStyleBackColor = true;
             this.ListExample.Click += new System.EventHandler(this.ListExample_Click);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(35, 318);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(65, 13);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Async Await";
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(183, 318);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.TabIndex = 16;
+            this.button6.Text = "Validate";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.asyncAwait_Click);
+            // 
             // frmDisplay
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1914, 767);
+            this.ClientSize = new System.Drawing.Size(1436, 623);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.ListExample);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.abstractFactory);
@@ -220,7 +228,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmDisplay";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -246,6 +253,8 @@
         private System.Windows.Forms.Button abstractFactory;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button ListExample;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button button6;
     }
 }
 
